@@ -1,10 +1,12 @@
-uint8_t* portaAddress = (uint8_t*)0x0400;
-uint8_t* portaA = (uint8_t*)0x0404;
+//DIR Register in MMIO Space
+uint16_t* directionReg = (uint16_t*)0x0400;
+//portA Register in MMIO Space
+uint16_t* portaA = (uint16_t*)0x0404;
 
 void setup() {
  
   //Set pin as Output
-  *portaAddress = 1;
+  *directionReg = 1;
 
   //Set pin Level as "HIGH"
   *portaA = 1;
@@ -15,8 +17,8 @@ void loop() {
 }
 
 void porta(){
-  //Reads the Current Value in the portA Register and Prints it
-  byte* content = *portaAddress;
+  //Reads the Current Value in the Direction Register and Prints it
+  byte* content = *directionReg;
   Serial.print((int)content);
   Serial.print("\n");
 }
