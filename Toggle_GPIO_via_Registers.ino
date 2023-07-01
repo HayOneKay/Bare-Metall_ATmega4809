@@ -3,20 +3,20 @@ uint8_t* portaA = (uint8_t*)0x0404;
 
 void setup() {
  
-  //Als ausgang setzen
+  //Set pin as Output
   *portaAddress = 1;
 
-  //Ausgang auf HIGH setzen
+  //Set pin Level as "HIGH"
   *portaA = 1;
 }
 
 void loop() {
-  // Your code here
-
+  porta()
 }
 
 void porta(){
-   byte* content = *portaAddress;
+  //Reads the Current Value in the portA Register and Prints it
+  byte* content = *portaAddress;
   Serial.print((int)content);
   Serial.print("\n");
 }
