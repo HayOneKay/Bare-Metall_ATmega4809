@@ -13,14 +13,13 @@ void setup() {
 }
 
 void loop() {
-  porta()
+  ReadPortA()
 }
 
-void porta(){
+void ReadPortA(){
   //Reads the Current Value in the Direction Register and Prints it
   byte* content = *directionReg;
   Serial.print((int)content);
   Serial.print("\n");
 }
 
-}
