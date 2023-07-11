@@ -8,4 +8,4 @@ Beispielsweise mit dem SRAM (Static Random Access Memory), wo ich Manuell ein Ar
 
 oder 
 
-Mit dem PORT Modul die Pins an oder ausschalten. Einfachgesagt, die pinMode(), und digitalWrite(), Bare-Metal Programmieren.
+Mit dem PORT Modul Registern die Pins an oder ausschalten. Einfachgesagt, die pinMode(), und digitalWrite(), Bare-Metal Programmieren.
